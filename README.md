@@ -7,13 +7,18 @@ Creating an immersive NFT experience from shopping to showcasing the NFT artwork
 Demoing an approach to interlinking NFTs enabling the ability to generate AR NFTs and Link existing AR NFTs to flat NFTs. 
 
 # Snapchat OpenSea Lens
+... in development.. 
+Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs that we have hooked up!
 
-# THE INTERLINKED NFT BRIDGE
+# Interlinked NFT Bridge
 Headover to check our progress on the hackathon and start seeing what we are pulling together..
 https://nfthack2022.netlify.app/
 
-# MetaQuest - Metaverse
-PWA App connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home
+# 3D NFT Generator
+Convert your NFT artwork into 3D GLB assets that you can place in your home or bring to the metaverse.
+
+# MetaQuest - Metaverse NFT Wallet access.
+PWA App available from the appstore connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home
 
 # Tech
 Netlify/Sveltkit/OpenSea/Moralis/SnapChat lens/Solidity/PWA.
