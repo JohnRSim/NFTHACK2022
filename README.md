@@ -20,7 +20,7 @@ https://github.com/JohnRSim/Twitter-Card-NFT-Generator
 
 # Interlinked NFT Bridge
 ... in development.. <br /> 
-A layer that allows you to connect your Flat NFT artwork (Images) with dynamic AR NFT artwork and apply interactive elements such as touch to intiate the AR 3D to animate.
+A layer that allows you to connect your Flat NFT artwork (Images) with dynamic 3D NFT artwork to display in AR or VR - with the added ability to apply interactive elements such as touch to intiate the 3D asset to animate.
 
 Headover to check our progress on the hackathon and start seeing what we are pulling together..<br />
 https://nfthack2022.netlify.app
