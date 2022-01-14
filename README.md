@@ -14,11 +14,11 @@ https://github.com/JohnRSim/Snapchat-OpenSea-Lens <br />
 
 # Enhancing OpenSea Social share<br />AR Player support within Twitter
 ... in development.. <br />
-Enables users to share OpenSea NFT page to twitter and display the interactive 3D NFT Asset - currently OpenSea only shows a static image of 3D content with the card in Twitter. <br />
+Enables users to share OpenSea NFT page to Twitter and display the interactive 3D NFT Asset - currently OpenSea only shows a static image of 3D content with the card in Twitter. <br />
 https://github.com/JohnRSim/Twitter-Card-NFT-Generator 
 
 # Interlinked NFT Bridge
-... in development.. <br />
+... in development.. <br /> 
 A layer that allows you to connect your Flat NFT artwork (Images) with dynamic AR NFT artwork and apply interactive elements such as touch to intiate the AR 3D to animate.
 
 Headover to check our progress on the hackathon and start seeing what we are pulling together..<br />
