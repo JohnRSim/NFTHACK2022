@@ -9,7 +9,7 @@ With demos and approaches to interlinking NFTs and enabling the ability to gener
 
 # Snapchat OpenSea Lens
 ... in development..<br /> 
-Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs that we have hooked up!<br />
+Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs in augmented reality that we have hooked up!<br />
 https://github.com/JohnRSim/Snapchat-OpenSea-Lens <br />
 
 # Enhancing OpenSea Social share<br />AR Player support within Twitter
