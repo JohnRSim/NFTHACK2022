@@ -10,7 +10,7 @@ Demoing an approach to interlinking NFTs enabling the ability to generate AR NFT
 ... in development.. https://github.com/JohnRSim/Snapchat-OpenSea-Lens
 Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs that we have hooked up!
 
-# Enhancing OpenSea with AR Player support within Twitter for Social share
+# Enhancing OpenSea Social share<br />AR Player support within Twitter
 Enables users to share OpenSea NFT page to twitter and display the interactive 3D NFT Asset - currently OpenSea only shows a static image of 3D content. 
 
 # Interlinked NFT Bridge
