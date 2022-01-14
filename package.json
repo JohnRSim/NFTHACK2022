@@ -1,6 +1,6 @@
 {
-  "name": "sveltekit-blog-mdx",
-  "version": "2.0.0",
+  "name": "the-imr-experience",
+  "version": "1.0.0",
   "scripts": {
     "dev": "svelte-kit dev --port 3000",
     "build": "npm run generate:manifest && svelte-kit build",
@@ -55,10 +55,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodneylab/sveltekit-blog-mdx"
+    "url": "https://github.com/JohnRSim/NFTHACK2022"
   },
   "bugs": {
-    "url": "https://github.com/rodneylab/sveltekit-blog-mdx/issues"
+    "url": "https://github.com/JohnRSim/NFTHACK2022/issues"
   },
   "type": "module"
 }
