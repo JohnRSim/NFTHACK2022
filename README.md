@@ -30,7 +30,8 @@ https://nfthack2022.netlify.app/ARNFTGenerator
 
 # MetaQuest - Metaverse NFT Wallet access.
 ... in development .. <br />
-PWA App available from the appstore connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home
+PWA App available from the appstore connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home.<br />
+https://github.com/JohnRSim/Metaverse-NFT-Interlinked-Wallet
 
 # Tech
 Netlify/Sveltkit/OpenSea/Moralis/SnapChat lens/Solidity/PWA.
