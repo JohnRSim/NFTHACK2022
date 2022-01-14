@@ -61,5 +61,8 @@
   "bugs": {
     "url": "https://github.com/JohnRSim/NFTHACK2022/issues"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "svelte-dnd-action": "^0.9.14"
+  }
 }
