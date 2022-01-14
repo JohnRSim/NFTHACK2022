@@ -84,17 +84,9 @@
 
 <SEO {...seoProps} />
 <header>
-  <h1>Climate &mdash; Sveltekit Starter</h1>
-  <h2>SvelteKit MDsveX (Markdown for Svelte) Blog</h2>
+  <h1>NFT Immersive Reality Bridge</h1>
+  <h2>dApp Written on top of Svelte, Moralis</h2>
 </header>
-<Card>
-  <h2><span>About me</span></h2>
-  <p>
-    I live and breathe analogue photography. I show you my favourite analogue film cameras on this
-    site. Hopefully if you are not into analogue photography yet, some of my enthusiasm will rub off
-    onto you.
-  </p>
-</Card>
 <BlogRoll {posts} />
 
 <style lang="scss">
