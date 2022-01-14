@@ -3,7 +3,7 @@
 # THE IMR EXPERIENCE (NFTHACK2022)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d34f6d2-f321-4e9a-bfe5-cad00261e5cd/deploy-status)](https://app.netlify.com/sites/nfthack2022/deploys)
 
-Creating an immersive NFT mixed reality experience from shopping to showcasing the NFT artwork you own from home and in the metaverse.
+Creating an immersive NFT mixed reality experience from shopping to showcasing the NFT artwork you own from your home and in the metaverse.
 
 With demos and approaches to interlinking NFTs and enabling the ability to generate AR NFTs from flat images and Link existing AR NFTs to flat NFTs. 
 
