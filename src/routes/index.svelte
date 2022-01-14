@@ -1,20 +1,3 @@
-<script context="module">
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
-  export async function load({ fetch }) {
-    const url = './index.json';
-    const response = await fetch(url);
-
-    if (response.ok) {
-      return {
-        props: { ...(await response.json()) },
-      };
-    }
-
-    return {};
-  }
-</script>
 
 <script>
   import ogSquareImageSrc from '$lib/assets/home/home-open-graph-square.jpg';
@@ -26,8 +9,6 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
 
-  export let posts;
-
   const { author, siteUrl } = website;
 
   let title = 'Home';
@@ -37,10 +18,8 @@
       slug: '',
     },
   ];
-  let metadescription =
-    'SvelteKit MDsvex Blog Starter - starter code by Rodney Lab to help you get going on your next blog site';
-  const featuredImageAlt =
-    'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+  let metadescription = '';
+  const featuredImageAlt = '';
   const featuredImage = {
     url: featuredImageSrc,
     alt: featuredImageAlt,
@@ -82,15 +61,12 @@
   };
 </script>
 
+<style lang="scss">
+</style>
+
+
 <SEO {...seoProps} />
 <header>
   <h1>NFT Immersive Reality Bridge</h1>
   <h2>dApp Written on top of Svelte, Moralis</h2>
 </header>
-<BlogRoll {posts} />
-
-<style lang="scss">
-  header > h2 {
-    font-size: $font-size-3;
-  }
-</style>
