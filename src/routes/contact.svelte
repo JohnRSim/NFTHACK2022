@@ -46,36 +46,12 @@
   <div class="contact-details">
     <ul>
       <li>
-        <EmailIcon />
-        <span class="contact-address">{contactEmail}</span>
-      </li>
-      <li>
-        <FacebookIcon /><ExternalLink
-          aria-label="D M Rodney Lab on Facebook Messenger"
-          href={`https://m.me.${facebookPageName}`}
-        >
-          <span class="contact-address"> {facebookPageName}</span>
-        </ExternalLink>
-      </li>
-      <li>
         <TwitterIcon /><ExternalLink
           aria-label="D M Rodney Lab on Twitter"
           href={`https://twitter.com/messages/compose?recipient-id=${twitterUserId}`}
         >
           <span class="contact-address">@{twitterUsername}</span>
         </ExternalLink>
-      </li>
-      <li>
-        <TelegramIcon /><ExternalLink
-          aria-label="Message Rodney Lab on Telegram"
-          href={`https://t.me/${telegramUsername}`}
-        >
-          <span class="contact-address">{telegramUsername}</span>
-        </ExternalLink>
-      </li>
-      <li>
-        <WireIcon />
-        <span class="contact-address">{wireUsername}</span>
       </li>
     </ul>
   </div></Card
