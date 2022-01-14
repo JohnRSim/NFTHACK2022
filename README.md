@@ -3,3 +3,7 @@
 # THE IMR EXPERIENCE
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d34f6d2-f321-4e9a-bfe5-cad00261e5cd/deploy-status)](https://app.netlify.com/sites/nfthack2022/deploys)
 
+Creating an immersive NFT experience from shopping to showcasing the NFT artwork you own from home and in the metaverse.
+
+# Tech
+Netlify/Sveltkit/OpenSea/Moralis/SnapChat lens/Solidity/PWA.
