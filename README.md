@@ -7,7 +7,7 @@ Creating an immersive NFT experience from shopping to showcasing the NFT artwork
 Demoing an approach to interlinking NFTs enabling the ability to generate AR NFTs and Link existing AR NFTs to flat NFTs. 
 
 # Snapchat OpenSea Lens
-... in development.. 
+... in development.. https://github.com/JohnRSim/Snapchat-OpenSea-Lens
 Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs that we have hooked up!
 
 # Interlinked NFT Bridge
