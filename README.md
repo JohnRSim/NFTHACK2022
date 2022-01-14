@@ -15,7 +15,7 @@ Headover to check our progress on the hackathon and start seeing what we are pul
 https://nfthack2022.netlify.app/
 
 # 3D NFT Generator
-Convert your NFT artwork into 3D GLB assets that you can place in your home or bring to the metaverse.
+Convert your Flat NFT artwork into 3D GLB assets that you can place in your home or bring to the metaverse.
 
 # MetaQuest - Metaverse NFT Wallet access.
 PWA App available from the appstore connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home
