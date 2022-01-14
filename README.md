@@ -13,6 +13,7 @@ Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to vie
 
 # Enhancing OpenSea Social share<br />AR Player support within Twitter
 ... in development.. <br />
+https://github.com/JohnRSim/Twitter-Card-NFT-Generator <br />
 Enables users to share OpenSea NFT page to twitter and display the interactive 3D NFT Asset - currently OpenSea only shows a static image of 3D content. 
 
 # Interlinked NFT Bridge
