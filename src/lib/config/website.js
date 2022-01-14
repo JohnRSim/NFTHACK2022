@@ -2,11 +2,11 @@ const facebookPageName = import.meta.env ? import.meta.env.VITE_FACEBOOK_PAGE : 
 const facebookAuthorPageName = import.meta.env ? import.meta.env.VITE_FACEBOOK_AUTHOR_PAGE : '';
 
 const website = {
-  author: 'Rodney Johnson',
+  author: 'John Sim',
   ogLanguage: 'en_GB',
   siteLanguage: 'en-GB',
-  siteTitle: 'SvelteKit Blog Mdx',
-  siteShortTitle: 'SvelteKit Blog',
+  siteTitle: 'NFTHACK2022',
+  siteShortTitle: 'hackathon2022',
   siteUrl: import.meta.env ? import.meta.env.VITE_SITE_URL : '',
   icon: 'static/icon.png',
   backgroundColor: '#1b4079',

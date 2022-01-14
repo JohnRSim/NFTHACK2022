@@ -22,6 +22,7 @@
     "@fontsource/lora": "^4.5.1",
     "@fontsource/source-sans-pro": "^4.5.1",
     "@rodneylab/sveltekit-components": "^0.2.5",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.38",
     "@sveltejs/adapter-static": "^1.0.0-next.24",
     "@sveltejs/kit": "^1.0.0-next.215",
     "@types/object-hash": "^2.2.1",
