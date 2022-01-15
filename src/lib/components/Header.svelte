@@ -8,6 +8,7 @@
   <nav class="nav">
     <ul>
       <li><a href="/.">Home</a></li>
+      <li><a href="/social">Social Share</a></li>
     </ul>
   </nav>
 </header>
