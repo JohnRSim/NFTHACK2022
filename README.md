@@ -3,23 +3,29 @@
 # THE IMR EXPERIENCE (NFTHACK2022)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9d34f6d2-f321-4e9a-bfe5-cad00261e5cd/deploy-status)](https://app.netlify.com/sites/nfthack2022/deploys)
 
-Creating an immersive NFT mixed reality experience from shopping to showcasing the NFT artwork you own from home and in the metaverse.
+Creating an immersive NFT mixed reality experience from shopping to showcasing the NFT artwork you own from your home and in the metaverse.
 
 With demos and approaches to interlinking NFTs and enabling the ability to generate AR NFTs from flat images and Link existing AR NFTs to flat NFTs. 
 
 # Snapchat OpenSea Lens
 ... in development..<br /> 
-Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs that we have hooked up!<br />
+Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs in augmented reality that we have hooked up!<br />
 https://github.com/JohnRSim/Snapchat-OpenSea-Lens <br />
 
-# Enhancing OpenSea Social share<br />AR Player support within Twitter
+# Enhancing OpenSea
+## Social share Twitter AR Player support
 ... in development.. <br />
-Enables users to share OpenSea NFT page to twitter and display the interactive 3D NFT Asset - currently OpenSea only shows a static image of 3D content. <br />
+Enables users to share OpenSea NFT page to Twitter and display the interactive 3D NFT Asset<br />
+Currently OpenSea only shows a static image of 3D content with the card in Twitter. <br />
 https://github.com/JohnRSim/Twitter-Card-NFT-Generator 
+## Launch AR experience from mobile and drop in home
+... in development.. <br />
+Enables users with a click of a button direct from OpenSea to load in a 3D AR asset from their mobile and experience it in AR wherever they are.
+https://github.com/JohnRSim/Launching-Web-AR-experiences
 
 # Interlinked NFT Bridge
-... in development.. <br />
-A layer that allows you to connect your Flat NFT artwork (Images) with dynamic AR NFT artwork and apply interactive elements such as touch to intiate the AR 3D to animate.
+... in development.. <br /> 
+A layer that allows you to connect your Flat NFT artwork (Images) with dynamic 3D NFT artwork to display in AR or VR - with the added ability to apply interactive elements such as touch to intiate the 3D asset to animate.
 
 Headover to check our progress on the hackathon and start seeing what we are pulling together..<br />
 https://nfthack2022.netlify.app
