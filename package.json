@@ -64,7 +64,6 @@
   "type": "module",
   "dependencies": {
     "opensea-js": "^1.2.7",
-    "svelte-dnd-action": "^0.9.14",
-    "web3": "^1.6.1"
+    "svelte-dnd-action": "^0.9.14"
   }
 }
