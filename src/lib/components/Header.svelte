@@ -9,6 +9,7 @@
     <ul>
       <li><a href="/.">Home</a></li>
       <li><a href="/social">Social Share</a></li>
+      <li><a href="/mobile">Mobile AR Launcher</a></li>
     </ul>
   </nav>
 </header>
