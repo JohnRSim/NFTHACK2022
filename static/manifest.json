@@ -1,7 +1,8 @@
 {
   "name": "NFTHACK2022",
   "short_name": "hackathon2022",
-  "start_url": "/index.html",
+  "start_url": "https://nfthack2022.netlify.app/",
+  "ovr_package_name": "com.imr.app.pwa",
   "background_color": "#1b4079",
   "theme_color": "#d62828",
   "display": "standalone",
