@@ -29,9 +29,8 @@ Headover to check our progress on the hackathon and start seeing what we are pul
 https://nfthack2022.netlify.app
 
 # 3D NFT Generator
-... in development .. <br />
 Convert your Flat NFT artwork into 3D GLB assets that you can place in your home or bring to the metaverse.<br />
-https://nfthack2022.netlify.app/ARNFTGenerator
+https://nfthack2022.netlify.app/convert
 
 # MetaQuest - Metaverse NFT Wallet access.
 ... in development .. <br />
