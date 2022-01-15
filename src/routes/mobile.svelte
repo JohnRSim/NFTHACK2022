@@ -231,6 +231,7 @@
       ar 
       ar-modes="webxr scene-viewer quick-look" 
       camera-controls 
+      style="min-height:500px; width:100%"
       alt="A">
       
       <button slot="ar-button" id="ar-button">
