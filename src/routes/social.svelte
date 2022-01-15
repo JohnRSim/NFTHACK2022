@@ -123,7 +123,11 @@
     <p>
       Copy the address of this page 
       {#if (isMounted)}<b>{window.location.href}</b>{/if} 
-      and paste it into twitter as a new message.
+      and paste it into twitter as a new message or test it out at the <a target="_blank" href="https://cards-dev.twitter.com/validator">Twitter card validator</a>.
     </p>
+    <p>
+      You should see the poster image display first whilst the 3D asset is loading and then see the animated 3D Model.
+    </p>
+    <img src="/socialCard.PNG" alt="" />
   </article>
 </section>
