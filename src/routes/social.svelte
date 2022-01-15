@@ -128,6 +128,6 @@
     <p>
       You should see the poster image display first whilst the 3D asset is loading and then see the animated 3D Model.
     </p>
-    <img src="/socialCard.PNG" alt="" />
+    <img width="100%" src="/socialCard.PNG" alt="" />
   </article>
 </section>
