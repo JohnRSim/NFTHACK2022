@@ -128,7 +128,7 @@
     .then(res => res.json())
     .then((response) => {
       console.log('Success:', JSON.stringify(response))
-      genModal = `${response.bsceneUrl}models/${tokenID}.glb`
+      genModal = `${response.bsceneUrl.replace(/b-sceneapp.com/,'https://nfthack2022.netlify.app/l/')}models/${tokenID}.glb`
       NFTGenComplete = true;
     })
     .catch((error) => {
