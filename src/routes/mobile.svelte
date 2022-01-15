@@ -111,7 +111,7 @@
       ar-modes="scene-viewer quick-look" 
       ar-scale="auto" 
       environment-image="neutral" 
-      src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
+      src="https://storage.opensea.io/files/875ff4284b671d7ff9ac12cc8e5076cf.glb" 
       alt="" 
       camera-controls auto-rotate ></model-viewer>
     <!--<model-viewer 
