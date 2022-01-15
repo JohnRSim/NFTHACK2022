@@ -13,7 +13,7 @@
 
   let { author, siteUrl } = website;
 
-  let title = 'Home';
+  let title = '3D Twitter Card NFT Generator Example';
   const breadcrumbs = [
     {
       name: 'Home',
@@ -27,7 +27,7 @@
     alt: featuredImageAlt,
     width: 672,
     height: 448,
-    caption: 'Home page',
+    caption: 'test',
   };
   const ogImage = {
     url: ogImageSrc,
@@ -63,8 +63,8 @@
     featuredImage,
     ogImage,
     ogSquareImage,
-    twitterImage,
-    playerURL: `${siteUrl}/player/3DViewer.html?src=${opensea3DAsset}&poster=${openseaPoster}&alt=${openseaAlt}`
+    twitterImage:openseaPoster,
+    playerURL: `https://nfthack2022.netlify.app/player/3DViewer.html?src=${opensea3DAsset}&poster=${openseaPoster}&alt=${openseaAlt}`
   };
 
   let isMounted = false;
@@ -106,14 +106,14 @@
       The player uses the Google <a href="https://github.com/google/model-viewer">https://github.com/google/model-viewer</a> web component and passes params via the address bar to display 3D GLB content. 
     </p>
 
-    <h3>Example NFT</h3>
+    <h3>Example Opensea NFT Data (Crypto Horse: Sushi Swap)</h3>
     <p>
       OpenSea NFT: <a target="_blank" href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/93290888789314140276970432121952459674757115801796959568208263017141295382529">https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/93290888789314140276970432121952459674757115801796959568208263017141295382529</a><br />
       Flat image preview: <a target="_blank" href="https://lh3.googleusercontent.com/6IgnSG5Nm84tHaseN2xLvYDE8HpnECabZ6qD1knvHTdJ4FnFZMntPd728EUgJtVzBSSuhfnGfgL5lm1NC-9jAupYI49TC96MDWqDhg=w386">https://lh3.googleusercontent.com/6IgnSG5Nm84tHaseN2xLvYDE8HpnECabZ6qD1knvHTdJ4FnFZMntPd728EUgJtVzBSSuhfnGfgL5lm1NC-9jAupYI49TC96MDWqDhg=w386</a><br />
       3D Asset: <a target="_blank" href="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb">https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb</a><br />
     </p>
 
-    <h3>Example 3D Model loaded from OpenSea</h3>
+    <h3>Example 3D Model loaded from OpenSea Data</h3>
     <iframe title="Example Model" src="{`${siteUrl}/player/3DViewer.html?src=https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb&poster=https://modelviewer.dev/shared-assets/models/NeilArmstrongPoster.webp&alt=Neil%20Armstrong%27s%20Spacesuit%20from%20the%20Smithsonian%20Digitization%20Programs%20Office%20and%20National%20Air%20and%20Space%20Museum`}" />
 
     <h3>Twitter Social Code</h3>
