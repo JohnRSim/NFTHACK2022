@@ -11,7 +11,7 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
 
-  const { author, siteUrl } = website;
+  let { author, siteUrl } = website;
 
   let title = 'Home';
   const breadcrumbs = [
