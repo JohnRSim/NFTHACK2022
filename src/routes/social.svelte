@@ -67,9 +67,11 @@
     playerURL: `${siteUrl}/player/3DViewer.html?src=${opensea3DAsset}&poster=${openseaPoster}&alt=${openseaAlt}`
   };
 
+  let isMounted = false;
   
   onMount(async() => {
-    
+    isMounted = true;
+    siteUrl = siteUrl || window.location.origin;
   });
 
 </script>
@@ -119,7 +121,9 @@
 
     <h3>Test it out on Twitter</h3>
     <p>
-      Copy the address of this page <b>{window.location.href}</b> and paste it into twitter as a new message.
+      Copy the address of this page 
+      {#if (isMounted)}<b>{window.location.href}</b>{/if} 
+      and paste it into twitter as a new message.
     </p>
   </article>
 </section>
