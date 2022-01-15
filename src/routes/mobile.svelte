@@ -77,6 +77,7 @@
 
   function load3DAsset() {
     const arViewer = document.getElementById('viewer');
+    console.log('loading',arViewer);
     arViewer.activateAR();
   }
 </script>
@@ -104,13 +105,23 @@
     </p>
 
     <model-viewer 
+      class="viewer" 
+      id="viewer" 
+      ar 
+      ar-modes="scene-viewer quick-look" 
+      ar-scale="auto" 
+      environment-image="neutral" 
+      src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
+      alt="" 
+      camera-controls auto-rotate ></model-viewer>
+    <!--<model-viewer 
       id="viewer"
       auto-rotate="true" 
       autoplay="true" 
       camera-controls="true" 
       class="ModelScene--viewer" 
       src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
-      ar-status="not-presenting"></model-viewer>
+      ar-status="not-presenting"></model-viewer>-->
 
       <button on:click="{load3DAsset}">Launch in Viewer</button>
   </article>
