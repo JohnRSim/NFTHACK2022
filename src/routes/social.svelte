@@ -63,7 +63,7 @@
     featuredImage,
     ogImage,
     ogSquareImage,
-    twitterImage:openseaPoster,
+    twitterImage: {url: openseaPoster},
     playerURL: `https://nfthack2022.netlify.app/player/3DViewer.html?src=${opensea3DAsset}&poster=${openseaPoster}&alt=${openseaAlt}`
   };
 
@@ -117,8 +117,15 @@
     <iframe title="Example Model" src="{`${siteUrl}/player/3DViewer.html?src=https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb&poster=https://modelviewer.dev/shared-assets/models/NeilArmstrongPoster.webp&alt=Neil%20Armstrong%27s%20Spacesuit%20from%20the%20Smithsonian%20Digitization%20Programs%20Office%20and%20National%20Air%20and%20Space%20Museum`}" />
 
     <h3>Twitter Social Code</h3>
-
-
+    <pre>
+      <code>
+&lt;meta name="twitter:card" content="player"&gt;
+&lt;meta name="twitter:player" content="https://nfthack2022.netlify.app/player/3DViewer.html?src={opensea3DAsset}&poster={openseaPoster}&alt={openseaAlt}"&gt;
+&lt;meta name="twitter:player:width" content="480"&gt;
+&lt;meta name="twitter:player:height" content="480"&gt;
+&lt;meta name="twitter:image" &gt;
+      </code>
+    </pre>
     <h3>Test it out on Twitter</h3>
     <p>
       Copy the address of this page 
