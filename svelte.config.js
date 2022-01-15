@@ -4,6 +4,7 @@ import adapter from '@sveltejs/adapter-netlify';
 import { imagetools } from 'vite-imagetools';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 
 const config = {
   extensions: ['.svelte', '.md', '.svelte.md'],
@@ -25,8 +26,20 @@ const config = {
     vite: {
       define: {
         'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
+        global: {}
       },
-      plugins: [imagetools({ force: true })],
+      plugins: [
+        imagetools({ force: true }),
+        nodePolyfills({
+          include: [
+            '*.js',
+           'node_modules/**/*.js',
+            new RegExp('node_modules/.vite/.*js')
+          ],
+          // ↓ Not sure if this line is necessary, seems to work without it
+          exclude: ['node_modules/polyfill-nodeglobal.js']
+        })
+      ],
     },
   },
 };

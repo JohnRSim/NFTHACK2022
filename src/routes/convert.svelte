@@ -2,6 +2,8 @@
 <script>
 	import { onMount } from 'svelte';
 
+  //import * as Web3 from 'web3';
+
   import ogSquareImageSrc from '$lib/assets/home/home-open-graph-square.jpg';
   import ogImageSrc from '$lib/assets/home/home-open-graph.jpg';
   import twitterImageSrc from '$lib/assets/home/home-twitter.jpg';
@@ -11,7 +13,6 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
 
-  import { OpenSeaPort, Network } from 'opensea-js';
 
   let { author, siteUrl } = website;
 
@@ -73,7 +74,8 @@
   
   onMount(async() => {
     isMounted = true;
-    siteUrl = siteUrl || window.location.origin;
+    const os = await import('opensea-js');
+    console.log('OpenSeaPort',os)
   });
 
 </script>
