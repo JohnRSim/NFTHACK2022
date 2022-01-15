@@ -63,6 +63,7 @@
   },
   "type": "module",
   "dependencies": {
+    "opensea-js": "^1.2.7",
     "svelte-dnd-action": "^0.9.14"
   }
 }

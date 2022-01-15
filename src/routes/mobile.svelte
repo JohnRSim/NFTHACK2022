@@ -221,8 +221,6 @@
     <p>
       You can use Googles native 3D viewer and launch the 3D NFT Asset into there but I ran into issues with GLB not loading so pulled the asset into WebXR which ran without issues.
     </p>
-
-    <!--<a target="_blank" href="https://modelviewer.dev/editor/view/?id=31048266482634015000">Launch 3D NFT</a>-->
     
     <model-viewer 
       src="https://storage.opensea.io/files/875ff4284b671d7ff9ac12cc8e5076cf.glb" 
@@ -246,40 +244,6 @@
         AR is not tracking!
       </button>
 
-      <!--<div class="slider">
-        <div class="slides">
-          <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
-
-          </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
-
-          </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.png');">
-          
-          </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.png');">
-          
-          </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.png');">    
-        </button></div>
-      </div>-->
     </model-viewer>
-
-    <!--<model-viewer 
-      class="viewer" 
-      id="viewer" 
-      ar 
-      ar-modes="scene-viewer quick-look" 
-      ar-scale="auto" 
-      environment-image="neutral" 
-      src="https://storage.opensea.io/files/875ff4284b671d7ff9ac12cc8e5076cf.glb" 
-      alt="" 
-      camera-controls auto-rotate ></model-viewer>-->
-    <!--<model-viewer 
-      id="viewer"
-      auto-rotate="true" 
-      autoplay="true" 
-      camera-controls="true" 
-      class="ModelScene--viewer" 
-      src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
-      ar-status="not-presenting"></model-viewer>
-
-      <button on:click="{load3DAsset}">Launch in Viewer</button>-->
   </article>
 </section>

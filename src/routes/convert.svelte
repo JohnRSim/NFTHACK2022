@@ -11,6 +11,8 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import website from '$lib/config/website';
 
+  import { OpenSeaPort, Network } from 'opensea-js';
+
   let { author, siteUrl } = website;
 
   let title = '3D Twitter Card NFT Generator Example';
@@ -87,6 +89,19 @@
     overflow: scroll;
     width: 100%;
   }
+
+  .previewFrame {
+    width:150px;
+    height:150px;
+    border:solid 5px #171717;
+    background:#e4e4e4
+  }
+
+  .generatorWrapper {
+    display: flex;
+    flex-direction: row
+    ;
+  }
 </style>
 
 
@@ -96,12 +111,30 @@
   <article>
     <h1>Convert Flat NFT to 3D</h1>
     <p>
-      This is a demo of how we can convert Flat NFTs and bring them to life with Mixed Reality and Virtual Reality within the metaverse!
-    </p>
-    <p>
-      This allows us to add support directly in Twitter for users to interact with 3D based models that are shared from OpenSea. 
+      This is a demo of how we can convert Flat NFTs and bring them to life with Mixed Reality and Virtual Reality within the Metaverse!
     </p>
 
-    
+  </article>
+  <hr />
+  <article>
+
+    <div class="generatorWrapper">
+      <div>
+        <input type="text" value="" placeholder="Enter an opensea NFT address" />
+        <button>Generate</button>
+        <h4>Opensea info</h4>
+      </div>
+      <div>
+        <h4>3D wrapper Model Preview</h4>
+        <label>Choose wrapper Model</label>
+        <select>
+          <option>Default</option>
+          <option>Fun</option>
+          <option>Experimental</option>
+          <option>New Age</option>
+        </select>
+        <div class="previewFrame"><div>
+      </div>
+    </div>
   </article>
 </section>
