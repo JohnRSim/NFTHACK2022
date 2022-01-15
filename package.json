@@ -64,7 +64,6 @@
   "type": "module",
   "dependencies": {
     "opensea-js": "^1.2.7",
-    "rollup-plugin-polyfill-node": "^0.8.0",
     "svelte-dnd-action": "^0.9.14",
     "web3": "^1.6.1"
   }
