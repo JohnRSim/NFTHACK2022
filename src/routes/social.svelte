@@ -81,6 +81,12 @@
   iframe {
     border:0px;
   }
+
+  pre {
+    
+    overflow: scroll;
+    width: 100%;
+  }
 </style>
 
 
@@ -136,5 +142,13 @@
       You should see the poster image display first whilst the 3D asset is loading and then see the animated 3D Model.
     </p>
     <img width="100%" src="/socialCard.PNG" alt="" />
+
+    
+    <h3>Example of OpenSea social card display</h3>
+    <p>
+      This is an example of the social share display for 3D content - it is still visually appealing but not interactive.
+    </p>
+    <img width="100%" src="/socialCard_opensea.PNG" alt="" />
+
   </article>
 </section>
