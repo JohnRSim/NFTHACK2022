@@ -104,7 +104,8 @@
       To make a more immersive experience and enhance the visual display of NFTs it is possible to launch from the web an direct Mixed Reality experience by taking the 3D NFT and placing it in your home for you to explore the asset in more detail in a 3D space.
     </p>
 
-    <model-viewer 
+    <a target="_blank" href="https://modelviewer.dev/editor/view/?id=31048266482634015000">Launch 3D NFT</a>
+    <!--<model-viewer 
       class="viewer" 
       id="viewer" 
       ar 
@@ -113,7 +114,7 @@
       environment-image="neutral" 
       src="https://storage.opensea.io/files/875ff4284b671d7ff9ac12cc8e5076cf.glb" 
       alt="" 
-      camera-controls auto-rotate ></model-viewer>
+      camera-controls auto-rotate ></model-viewer>-->
     <!--<model-viewer 
       id="viewer"
       auto-rotate="true" 
@@ -121,8 +122,8 @@
       camera-controls="true" 
       class="ModelScene--viewer" 
       src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
-      ar-status="not-presenting"></model-viewer>-->
+      ar-status="not-presenting"></model-viewer>
 
-      <button on:click="{load3DAsset}">Launch in Viewer</button>
+      <button on:click="{load3DAsset}">Launch in Viewer</button>-->
   </article>
 </section>
