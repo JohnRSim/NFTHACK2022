@@ -21,6 +21,7 @@ https://github.com/JohnRSim/Twitter-Card-NFT-Generator
 ## Launch AR experience from mobile and drop in home
 ... in development.. <br />
 Enables users with a click of a button direct from OpenSea to load in a 3D AR asset from their mobile and experience it in AR wherever they are.
+https://github.com/JohnRSim/Launching-Web-AR-experiences
 
 # Interlinked NFT Bridge
 ... in development.. <br /> 
