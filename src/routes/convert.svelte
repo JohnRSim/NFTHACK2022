@@ -180,7 +180,7 @@
 
 <section>
   <article>
-    <h1>Convert Flat NFT to 3D</h1>
+    <h1>Convert Flat NFT to 3D.</h1>
     <p>
       This is a demo of how we can convert Flat NFTs and bring them to life with Mixed Reality and Virtual Reality within the Metaverse!
     </p>
