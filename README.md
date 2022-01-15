@@ -20,7 +20,7 @@ Currently OpenSea only shows a static image of 3D content with the card in Twitt
 https://github.com/JohnRSim/Twitter-Card-NFT-Generator 
 ## Launch AR experience from mobile and drop in home
 ... in development.. <br />
-Enables users with a click of a button direct from OpenSea to load in a 3D AR asset from their mobile and experience it in AR whereever they are.
+Enables users with a click of a button direct from OpenSea to load in a 3D AR asset from their mobile and experience it in AR wherever they are.
 
 # Interlinked NFT Bridge
 ... in development.. <br /> 
