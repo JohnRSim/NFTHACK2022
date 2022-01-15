@@ -71,13 +71,82 @@
   };
 
   let isMounted = false;
+  let url;
+  let openseaConnected = false;
   
   onMount(async() => {
     isMounted = true;
-    const os = await import('opensea-js');
-    console.log('OpenSeaPort',os)
+    openseaConnected = true;
+    /*
+    const OS = await import('opensea-js');
+    openseaConnected = true;
+    console.log('OpenSeaPort',OS)
+
+    const provider = new Web3.providers.HttpProvider('https://mainnet.infura.io')
+    const seaport = new OpenSeaPort(provider, {
+      networkName: OS.Network.Main,
+      apiKey: YOUR_API_KEY
+    });
+    */
   });
 
+  let tokenID;
+  async function retrieveAssetInfo() {
+    if (!url) {
+      alert('Enter an opensea NFT address ie https://opensea.io/assets/0xd07dc4262bcdbf85190c01c996b4c06a461d2430/92070')
+      return;
+    }
+
+    const OS_address = url.replace(/https:\/\//,'');
+    const assetData = OS_address.split('/');
+
+    const contractAddress = assetData[2];
+    tokenID = assetData[3];
+
+    console.log(contractAddress,tokenID);
+    console.log(assetData);
+    /*
+    const OpenSeaAsset = await seaport.api.getAsset({
+      contractAddress, // string
+      tokenID, // string | number | null
+    });*/
+    gen3D();
+  }
+
+  let genModal = '';
+  let NFTGenComplete = false;
+  function gen3D() {
+    if (!url) {
+      alert('Enter an opensea NFT address ie https://opensea.io/assets/0xd07dc4262bcdbf85190c01c996b4c06a461d2430/92070')
+      return;
+    }
+
+    NFTGenComplete = false;
+    fetch(`https://api.b-sceneapp.com/nft?NFTUrl=${url}`, {
+        method: 'get'
+    })
+    .then(res => res.json())
+    .then((response) => {
+      console.log('Success:', JSON.stringify(response))
+      genModal = `${response.bsceneUrl}models/${tokenID}.glb`
+      NFTGenComplete = true;
+    })
+    .catch((error) => {
+      console.error('Error:', error)
+      NFTGenComplete = false;
+    });
+    /*
+    {
+      "owner":"PAGESVFX2",
+      "creator":"PAGESVFX2",
+      "title":"Crypto Horse: Sushi Swap",
+      "imageUrl":"https://lh3.googleusercontent.com/6IgnSG5Nm84tHaseN2xLvYDE8HpnECabZ6qD1knvHTdJ4FnFZMntPd728EUgJtVzBSSuhfnGfgL5lm1NC-9jAupYI49TC96MDWqDhg=s2500",
+      "marketplace":"Opensea",
+      "nftUrl":"https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/93290888789314140276970432121952459674757115801796959568208263017141295382529","token":"93290888789314140276970432121952459674757115801796959568208263017141295382529",
+      "bsceneUrl":"https://b-sceneapp.com/assets/opensea/93290888789314140276970432121952459674757115801796959568208263017141295382529/"
+    }
+    */
+  }
 </script>
 
 <style>
@@ -119,24 +188,55 @@
   </article>
   <hr />
   <article>
-
-    <div class="generatorWrapper">
-      <div>
-        <input type="text" value="" placeholder="Enter an opensea NFT address" />
-        <button>Generate</button>
-        <h4>Opensea info</h4>
+    {#if (NFTGenComplete)}
+      
+      <model-viewer 
+        src="{genModal}" 
+        shadow-intensity="1" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        style="min-height:500px; width:100%"
+        alt="A">
+      
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+  
+        <div id="ar-prompt">
+          <img src="/hand.png" alt="">
+        </div>
+  
+        <button id="ar-failure">
+          AR is not tracking!
+        </button>
+  
+      </model-viewer>
+    {:else}
+      {#if (!openseaConnected)}
+        Connecting to OpenSea
+      {/if}
+      <div class="generatorWrapper">
+        <div>
+          {#if (openseaConnected)}
+          <input type="text" bind:value={url} placeholder="Enter an opensea NFT address" />
+          <button on:click="{retrieveAssetInfo}">Generate</button>
+          <h4>Opensea info</h4>
+          {/if}
+        </div>
+        <div>
+          <h4>3D wrapper Model Preview</h4>
+          <label>Choose wrapper Model</label>
+          <select>
+            <option>Default</option>
+            <option>Fun</option>
+            <option>Experimental</option>
+            <option>New Age</option>
+          </select>
+        </div>
       </div>
-      <div>
-        <h4>3D wrapper Model Preview</h4>
-        <label>Choose wrapper Model</label>
-        <select>
-          <option>Default</option>
-          <option>Fun</option>
-          <option>Experimental</option>
-          <option>New Age</option>
-        </select>
-        <div class="previewFrame"><div>
-      </div>
-    </div>
+    {/if}
   </article>
+
+
 </section>
