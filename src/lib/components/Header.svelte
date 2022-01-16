@@ -8,6 +8,7 @@
   <nav class="nav">
     <ul>
       <li><a href="/.">Home</a></li>
+      <li><a href="/snap">Snapchat</a></li>
       <li><a href="/social">Social Share</a></li>
       <li><a href="/mobile">Mobile AR Launcher</a></li>
       <li><a href="/convert">Convert Flat NFT to 3D</a></li>
