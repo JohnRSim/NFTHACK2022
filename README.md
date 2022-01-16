@@ -8,7 +8,6 @@ Creating an immersive NFT mixed reality experience from shopping to showcasing t
 With demos and approaches to interlinking NFTs and enabling the ability to generate AR NFTs from flat images and Link existing AR NFTs to flat NFTs. 
 
 # Snapchat OpenSea Lens
-... in development..<br /> 
 Install our Snapchat OpenSea lens and point it at the Opensea NFT Library to view NFTs in augmented reality that we have hooked up!<br />
 https://github.com/JohnRSim/Snapchat-OpenSea-Lens <br />
 
@@ -33,7 +32,6 @@ Convert your Flat NFT artwork into 3D GLB assets that you can place in your home
 https://nfthack2022.netlify.app/convert
 
 # MetaQuest - Metaverse NFT Wallet access.
-... in development .. <br />
 PWA App available from the appstore connected with the NFT Bridge to access and download your AR/3D assets and display them in the metaverse in your Virtual home.<br />
 https://github.com/JohnRSim/Metaverse-NFT-Interlinked-Wallet
 
