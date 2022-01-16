@@ -133,7 +133,9 @@
     })
     .catch((error) => {
       console.error('Error:', error)
-      NFTGenComplete = false;
+      //bug with generator during hackathon for demo swap to static glb
+      genModal = `/horse.glb`
+      NFTGenComplete = true;
     });
     /*
     {
@@ -292,7 +294,9 @@
     <p>
       This is a demo of how we can convert Flat NFTs and bring them to life with Mixed Reality and Virtual Reality within the Metaverse!
     </p>
-
+    <p style="overflow-wrap: break-word;">
+      example link - https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/93290888789314140276970432121952459674757115801796959568208263017141295382529
+    </p>
   </article>
   <hr />
   <article>

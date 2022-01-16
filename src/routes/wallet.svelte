@@ -168,8 +168,13 @@
     a.download = url.split('/').pop()
     document.body.appendChild(a)
     a.click()
-    document.body.removeChild(a)
+    document.body.removeChild(a);
+
+    alert('File downloaded - head over to oculus home to place your asset');
   }
+
+  let view3D = false;
+
 </script>
 
 <style>
@@ -345,35 +350,90 @@ figure img {
         <div class="card">
           <figure>
             
-            <model-viewer 
-              src="/fox.glb" 
-              poster="/logo.png" 
-              shadow-intensity="1" 
-              ar 
-              ar-modes="webxr scene-viewer quick-look" 
-              camera-controls 
-              style="width:100%"
-              alt="A">
-              
-              <button slot="ar-button" id="ar-button">
-                View in your space
-              </button>
+            {#if (view3D)}
+              <model-viewer 
+                src="/fox.glb" 
+                poster="/logo.png" 
+                shadow-intensity="1" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                style="width:100%"
+                alt="A">
+                
+                <button slot="ar-button" id="ar-button">
+                  View in your space
+                </button>
 
-              <div id="ar-prompt">
-                <img src="/hand.png" alt="">
-              </div>
+                <div id="ar-prompt">
+                  <img src="/hand.png" alt="">
+                </div>
 
-              <button id="ar-failure">
-                AR is not tracking!
-              </button>
+                <button id="ar-failure">
+                  AR is not tracking!
+                </button>
 
-            </model-viewer>
+              </model-viewer>
+            {:else}
+              <img src="/logo.png" alt=""/>
+            {/if}
             <caption>
               The IMR Experience
             </caption>
             <footer>
+              {#if (view3D)}
+                <button on:click="{() => {view3D = !view3D;}}">View Image</button>
+              {:else}
+                <button on:click="{() => {view3D = !view3D;}}">View 3D</button>
+              {/if}
               <button on:click="{() => {download('/fox.glb')}}">Download</button>
-              <a style="display:block; padding:40px; background:red;" href="/fox.glb" download>fox</a>
+              <!--<a style="display:block; padding:40px; background:red;" href="/fox.glb" download>fox</a>-->
+            </footer>
+          </figure>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <figure>
+            
+            {#if (view3D)}
+              <model-viewer 
+                src="/horse.glb" 
+                poster="/horse.png" 
+                shadow-intensity="1" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                style="width:100%"
+                alt="A">
+                
+                <button slot="ar-button" id="ar-button">
+                  View in your space
+                </button>
+
+                <div id="ar-prompt">
+                  <img src="/hand.png" alt="">
+                </div>
+
+                <button id="ar-failure">
+                  AR is not tracking!
+                </button>
+
+              </model-viewer>
+            {:else}
+              <img src="/horse.png" alt=""/>
+            {/if}
+            <caption>
+              The IMR Experience
+            </caption>
+            <footer>
+              {#if (view3D)}
+                <button on:click="{() => {view3D = !view3D;}}">View Image</button>
+              {:else}
+                <button on:click="{() => {view3D = !view3D;}}">View 3D</button>
+              {/if}
+              <button on:click="{() => {download('/fox.glb')}}">Download</button>
+              <!--<a style="display:block; padding:40px; background:red;" href="/fox.glb" download>fox</a>-->
             </footer>
           </figure>
         </div>
@@ -389,9 +449,10 @@ figure img {
                 {nft.metadata.name}
               </caption>
               <footer>
-                <button>Download</button>
                 {#if (checkExt(nft.metadata.image) === 'img')}
                   <button>Generate 3D</button>
+                {:else}
+                  <button>Download</button>
                 {/if}
               </footer>
             </figure>
