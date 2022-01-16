@@ -84,7 +84,7 @@
 
 <section>
   <article>
-    <h1>Spachat  &amp; Spectacles...</h1>
+    <h1>Spachat &amp; Spectacles...</h1>
     <p>
       Creating rich immersive content with Spectacles and Snapchat!
     </p>

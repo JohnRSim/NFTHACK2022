@@ -246,4 +246,10 @@
 
     </model-viewer>
   </article>
+  <article>
+    <video width="100%" height="440" controls>
+      <source src="/mobileAR.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </article>
 </section>
