@@ -11,6 +11,7 @@
       <li><a href="/social">Social Share</a></li>
       <li><a href="/mobile">Mobile AR Launcher</a></li>
       <li><a href="/convert">Convert Flat NFT to 3D</a></li>
+      <li><a href="/wallet">Metaverse Wallet</a></li>
     </ul>
   </nav>
 </header>
@@ -19,7 +20,7 @@
   .header-container {
     display: flex;
     align-items: flex-end;
-    max-width: $max-width-wrapper;
+    max-width: 1000px;/*$max-width-wrapper;*/
     width: 100%;
     margin: $spacing-0 auto $spacing-12;
   }
@@ -37,7 +38,7 @@
 
       li {
         display: flex;
-        font-size: $font-size-4;
+        font-size: 1.2rem;/*$font-size-4*/;
         margin-left: $spacing-6;
         margin-bottom: $spacing-1;
       }
