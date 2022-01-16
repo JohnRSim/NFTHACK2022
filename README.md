@@ -20,13 +20,6 @@ https://github.com/JohnRSim/Twitter-Card-NFT-Generator
 Enables users with a click of a button direct from OpenSea to load in a 3D AR asset from their mobile and experience it in AR wherever they are.
 https://github.com/JohnRSim/Launching-Web-AR-experiences
 
-# Interlinked NFT Bridge
-... in development.. <br /> 
-A layer that allows you to connect your Flat NFT artwork (Images) with dynamic 3D NFT artwork to display in AR or VR - with the added ability to apply interactive elements such as touch to intiate the 3D asset to animate.
-
-Headover to check our progress on the hackathon and start seeing what we are pulling together..<br />
-https://nfthack2022.netlify.app
-
 # 3D NFT Generator
 Convert your Flat NFT artwork into 3D GLB assets that you can place in your home or bring to the metaverse.<br />
 https://nfthack2022.netlify.app/convert
