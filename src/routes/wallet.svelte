@@ -373,6 +373,7 @@ figure img {
             </caption>
             <footer>
               <button on:click="{() => {download('/fox.glb')}}">Download</button>
+              <a style="display:block; padding:40px; background:red;" href="/fox.glb" download>fox</a>
             </footer>
           </figure>
         </div>
