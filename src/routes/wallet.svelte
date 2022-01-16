@@ -75,6 +75,11 @@
   const serverUrl = 'https://up4dw9h6ggww.usemoralis.com:2053/server';
   const appId = 'vq18qD9kJiueOdtWq6qzQXPwTCuRpHRCjxYD0sRh';
 
+  let modalDom;
+  let hideModal = false;
+  let modalDom2;
+  let hideModal2 = false;
+
   $:userNFTs = [];
 
   onMount(async() => {
@@ -86,7 +91,8 @@
     getNFTs();
   });
 
-  let user = false;
+  $:loggedIn = false;
+  let user;
   /**
    * login
    */
@@ -100,13 +106,16 @@
           console.log("logged in user:", user);
           getNFTs();
           console.log(user.get("ethAddress"));
+          loggedIn=true;
         })
         .catch(function (error) {
           console.log(error);
+          loggedIn=false;
         });
     } else {
       
       getNFTs();
+      loggedIn=true;
     }
   }
   
@@ -115,6 +124,8 @@
    */
   async function logOut() {
     await Moralis.User.logOut();
+    userNFTs = [];
+    loggedIn=false;
     console.log("logged out");
   }
 
@@ -174,7 +185,74 @@
   }
 
   let view3D = false;
+  let Frame3D = false;
 
+  function show() {
+    generateRan();
+    modalDom.showModal();
+  }
+  /**
+   * closeModel
+   **/
+  function closeModel() {
+    //const modal = document.querySelector('#modal');
+    if ((modalDom) && (modalDom.open)) {
+      hideModal = true;
+      //loading = false;
+      const hideTheModal = function() {
+          hideModal = false;
+          modalDom.close();
+          //dispatchEvent('reset');
+          modalDom.removeEventListener('webkitAnimationEnd', hideTheModal, false);
+      }
+      modalDom.addEventListener('webkitAnimationEnd', hideTheModal, false);
+    }
+  }
+
+  function show2() {
+    modalDom2.showModal();
+  }
+  /**
+   * closeModel
+   **/
+  function closeModel2() {
+    showWallet();
+    //const modal = document.querySelector('#modal');
+    if ((modalDom2) && (modalDom2.open)) {
+      hideModal2 = true;
+      //loading = false;
+      const hideTheModal = function() {
+          hideModal2 = false;
+          modalDom2.close();
+          //dispatchEvent('reset');
+          modalDom2.removeEventListener('webkitAnimationEnd', hideTheModal, false);
+      }
+      modalDom2.addEventListener('webkitAnimationEnd', hideTheModal, false);
+    }
+  }
+  let rand;
+  function generateRan() {
+    rand = Math.floor((Math.random() * 9999) + 1000);
+
+  }
+
+  function connectVR() {
+    show2()
+  }
+
+  async function showWallet() {
+    
+    const userEthNFTs = await Moralis.Web3API.account.getNFTs({ chain: 'rinkeby', address: '0x1Eb05E2Ab2e838EB2c5ce9AEfb66068313FFED7F' });
+    console.log('userEthNFTs',userEthNFTs.result);
+    const hasNFTs = userEthNFTs.result.filter((nft) => {
+      if (nft.metadata !== null) {
+        nft.metadata = JSON.parse(nft.metadata);
+      }
+      return (nft.metadata !== null);
+    });
+    console.log('hasNFTs',hasNFTs)
+    userNFTs = hasNFTs;
+  }
 </script>
 
 <style>
@@ -319,10 +397,87 @@ figure img {
   model-viewer[ar-tracking="not-tracking"] > #ar-failure {
     display: block;
   }
+:global(dialog[open]) {
+  animation-name: showmodal;
+  animation-duration: 0.6s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  opacity:0;
+  transform:translate3d(0%, 100%, 0px);
+}
+
+:global(dialog[open].hide) {
+  animation-name: hidemodal;
+  animation-duration: 0.6s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  opacity:1;
+  transform:translate3d(0%, -10%, 0px);
+  /*bottom: 20px;*/
+}
+
+@keyframes showmodal {
+  0% {transform:translate3d(0%, 100%, 0px); opacity: 0}
+  1% {opacity: 1}
+  to {transform:translate3d(0%, -10%, 0px); opacity: 1}
+}
+
+@keyframes hidemodal {
+  0% {transform:translate3d(0%, -10%, 0px); opacity: 1}
+  to {transform:translate3d(0%, 100%, 0px);opacity: 0}
+}
+
+.numInput {
+  display: flex;
+  flex-direction: row;
+  max-width:100px;
+}
+
+.numInput > div input {
+  min-height:80px;
+  text-align:center;
+    background: #000;
+    border-radius: 8px;
+    width: 60px;
+    margin: 10px;
+    color: #fff;
+    font-size: 2em;
+}
 </style>
 
 
 <SEO {...seoProps} />
+
+<dialog 
+  id="modal" 
+  class:hide="{hideModal}" 
+  bind:this="{modalDom}">
+  <div id="modelWrapper" style="text-align:center">
+    <h4 style="margin:0px;">
+      Launch the VR Wallet and connect using this number :
+    </h4>
+    <h2 style="margin:20px;">{rand}</h2>
+    <button on:click="{closeModel}">close</button>
+  </div>
+</dialog>
+<dialog 
+  id="modal2" 
+  class:hide="{hideModal2}" 
+  bind:this="{modalDom2}">
+  <div id="modelWrapper" style="text-align:center">
+    <h4 style="margin:0px;">
+      Enter your VR Wallet Connection No :
+    </h4>
+    
+    <div class="numInput">
+      <div><input type="text" /></div>
+      <div><input type="text" /></div>
+      <div><input type="text" /></div>
+      <div><input type="text" /></div>
+    </div>
+    <button on:click="{closeModel2}">Connect</button>
+  </div>
+</dialog>
 
 <section>
   <article>
@@ -334,17 +489,19 @@ figure img {
   </article>
 
   <article style="margin-bottom:40px">
-    {#if (!user)}
+    {#if (!loggedIn)}
     <button on:click="{login}">Connect to Wallet</button>
     {:else}
     <button on:click="{logOut}">Logout</button>
     {/if}
-    <button>Connect to VR Metaverse</button>
+    <button on:click="{show}">Setup VR Wallet Connector</button>
+    <button on:click="{connectVR}">Connect to VR Metaverse</button>
   </article>
 
   <article>
     
     <ul class="grid">
+      {#if (userNFTs.length > 0)}
       <li>
         <!-- moralis not syncing new opensea nft hardcoding for now.. -->
         <div class="card">
@@ -398,7 +555,7 @@ figure img {
             
             {#if (view3D)}
               <model-viewer 
-                src="/horse.glb" 
+                src="https://storage.opensea.io/files/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
                 poster="/horse.png" 
                 shadow-intensity="1" 
                 ar 
@@ -412,7 +569,31 @@ figure img {
                 </button>
 
                 <div id="ar-prompt">
-                  <img src="/hand.png" alt="">
+                  <img src="/hand.png" alt="" />
+                </div>
+
+                <button id="ar-failure">
+                  AR is not tracking!
+                </button>
+
+              </model-viewer>
+            {:else if (Frame3D)}
+              <model-viewer 
+                src="/c0bf8dadebe20f730940bb5acc5a0f55.glb" 
+                poster="/horse.png" 
+                shadow-intensity="1" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                style="width:100%"
+                alt="A">
+                
+                <button slot="ar-button" id="ar-button">
+                  View in your space
+                </button>
+
+                <div id="ar-prompt">
+                  <img src="/hand.png" alt="" />
                 </div>
 
                 <button id="ar-failure">
@@ -432,7 +613,8 @@ figure img {
               {:else}
                 <button on:click="{() => {view3D = !view3D;}}">View 3D</button>
               {/if}
-              <button on:click="{() => {download('/fox.glb')}}">Download</button>
+              <button on:click="{() => { view3D = false; Frame3D = true; }}">Generate 3D Frame</button>
+              <button on:click="{() => {download('/c0bf8dadebe20f730940bb5acc5a0f55.glb')}}">Download</button>
               <!--<a style="display:block; padding:40px; background:red;" href="/fox.glb" download>fox</a>-->
             </footer>
           </figure>
@@ -450,7 +632,7 @@ figure img {
               </caption>
               <footer>
                 {#if (checkExt(nft.metadata.image) === 'img')}
-                  <button>Generate 3D</button>
+                  <button>Generate 3D Frame</button>
                 {:else}
                   <button>Download</button>
                 {/if}
@@ -459,6 +641,7 @@ figure img {
           </div>
         </li>
       {/each}
+      {/if}
     </ul>
   </article>
 </section>
